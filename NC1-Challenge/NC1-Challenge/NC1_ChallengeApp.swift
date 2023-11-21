@@ -12,6 +12,7 @@ struct NC1_ChallengeApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(\.accessibilityEnabled,true)
         }
     }
 }
