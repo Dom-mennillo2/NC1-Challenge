@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 
 
@@ -24,6 +25,8 @@ struct SettingView: View  {
 struct ContentView: View {
     @State var i : ElementiProm = ElementiProm()
     @State private var searchText: String = ""
+    @Query private var Reminders: [Reminder]
+    @State var modal = false
     
     var body: some View {
         
@@ -55,7 +58,7 @@ struct ContentView: View {
                                 })
                                 
                             }
-                            
+                                
                             }.buttonStyle(PlainButtonStyle())
                             
                             
@@ -71,14 +74,23 @@ struct ContentView: View {
                     
                     
                 }
-                HStack{ Text("I miei elenchi")
+                HStack{ Text("My lists")
                         .font(.title)
                         .bold()
                         .padding()
                     Spacer()
                 }
-               
-               
+                
+            
+                VStack {
+                    Section{
+                        NavigationLink(destination: Home(num:0)){
+                            Text("Reminder")
+                            
+                        }.buttonStyle(PlainButtonStyle())
+                    }
+                }
+            
                 
             }
             
@@ -87,13 +99,15 @@ struct ContentView: View {
                 .toolbar {
                     ToolbarItem(placement: .primaryAction) {
                         Menu() {
-                            Button(action: {}, label: {
-                                Text("Modifica elenchi")
+                            Button(action: {
+                                
+                            }, label: {
+                                Text("Edit lists")
                                 Spacer()
                                 Image(systemName: "pencil")
                             })
                             Button(action: {}, label: {
-                                Text("Modelli")
+                                Text("Models")
                                 Spacer()
                                 Image(systemName: "square.on.square")
                             })
@@ -107,12 +121,21 @@ struct ContentView: View {
                 }
                 .toolbar{
                     ToolbarItemGroup(placement: .bottomBar){
-                        Button(action: {}, label: {
-                            Image(systemName: "plus.circle.fill")
-                            Text("Promemoria")
+                        Button(action: {
+                            
+                            modal.toggle()
+                            
+                        }, label: {
+                           
+                                Image(systemName: "plus.circle.fill")
+                                Text("Reminder")
+                                    .bold()
+                            
+                        }).sheet(isPresented: $modal, content: {
+                            Add_reminder()
                         })
                         Button(action: {}, label: {
-                            Text("Aggiungi Elenco")
+                            Text("Add Lists")
                         })
                         
                     }

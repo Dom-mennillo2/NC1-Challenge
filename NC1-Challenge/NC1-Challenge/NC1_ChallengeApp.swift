@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import SwiftData
+
 
 @main
 struct NC1_ChallengeApp: App {
@@ -14,5 +16,8 @@ struct NC1_ChallengeApp: App {
             ContentView()
                 .environment(\.accessibilityEnabled,true)
         }
+        .modelContainer(for: Reminder.self)
+        
     }
+        
 }

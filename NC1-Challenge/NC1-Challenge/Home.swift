@@ -18,7 +18,7 @@ struct Home : View  {
         List(0..<num){_ in
             Text("Hello World !!")
         }
-        .accessibilityLabel("Label")
+        
     }
 }
 #Preview {

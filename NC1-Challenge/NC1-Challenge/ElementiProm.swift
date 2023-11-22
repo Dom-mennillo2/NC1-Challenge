@@ -24,7 +24,7 @@ struct Rett:Identifiable{
 
 class ElementiProm{
 
-    var elementi : [Rett] = [Rett(nomeSimbolo: "20.circle.fill", cont: 0, title: "oggi", colore1: .blue, colore2: .white),Rett(nomeSimbolo: "calendar.circle.fill", cont: 0, title: "Programmati", colore1: .red, colore2: .white),Rett(nomeSimbolo: "tray.circle.fill", cont: 5, title: "Tutti", colore1: .gray, colore2: .white),Rett(nomeSimbolo: "flag.circle.fill", cont: 0, title: "Contrassegnati", colore1: .yellow, colore2: .white),Rett(nomeSimbolo: "checkmark.circle.fill", cont: 2, title: "Completati", colore1: .gray, colore2: .white)]
+    var elementi : [Rett] = [Rett(nomeSimbolo: "20.circle.fill", cont: 0, title: "Today", colore1: .blue, colore2: .white),Rett(nomeSimbolo: "calendar.circle.fill", cont: 0, title: "Scheduled", colore1: .red, colore2: .white),Rett(nomeSimbolo: "tray.circle.fill", cont: 5, title: "All", colore1: .gray, colore2: .white),Rett(nomeSimbolo: "flag.circle.fill", cont: 0, title: "Marked", colore1: .yellow, colore2: .white),Rett(nomeSimbolo: "checkmark.circle.fill", cont: 2, title: "Completed", colore1: .gray, colore2: .white)]
     
     
 }
