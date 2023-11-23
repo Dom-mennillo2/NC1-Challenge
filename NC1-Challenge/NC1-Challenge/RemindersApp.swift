@@ -10,7 +10,7 @@ import SwiftData
 
 
 @main
-struct NC1_ChallengeApp: App {
+struct RemindersApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

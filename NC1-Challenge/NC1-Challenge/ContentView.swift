@@ -30,8 +30,10 @@ struct ContentView: View {
     
     var body: some View {
         
+        
         NavigationView {
             ScrollView{
+                
                 
                 VStack {
                     LazyVGrid(columns: Array(repeating: GridItem(), count: 2)){
@@ -84,10 +86,15 @@ struct ContentView: View {
             
                 VStack {
                     Section{
+                        
                         NavigationLink(destination: Home(num:0)){
+                            
                             Text("Reminder")
+                                .padding([.leading])
+                                Spacer()
                             
                         }.buttonStyle(PlainButtonStyle())
+                        
                     }
                 }
             
