@@ -84,19 +84,23 @@ struct ContentView: View {
                 }
                 
             
-                VStack {
-                    Section{
-                        
+                
+               
+                   
+                        Section{
                         NavigationLink(destination: Home(num:0)){
                             
                             Text("Reminder")
+                            
+                            
                                 .padding([.leading])
-                                Spacer()
+                            Spacer()
                             
                         }.buttonStyle(PlainButtonStyle())
                         
                     }
-                }
+                
+                
             
                 
             }
